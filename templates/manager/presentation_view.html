@@ -1,0 +1,555 @@
+{% extends "manager/base.html" %}
+
+{% block title %}{{ presentation.title }} | Презентация | InBack{% endblock %}
+
+{% block head %}
+<!-- CSRF Token для защиты от CSRF атак -->
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<style>
+    /* Минималистичные стили без градиентов и анимаций */
+    .breadcrumb {
+        color: #6b7280;
+        font-size: 14px;
+    }
+    
+    .breadcrumb a:hover {
+        color: #059669;
+    }
+    
+    .presentation-header {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+    }
+    
+    .toolbar {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+    }
+    
+    .action-btn {
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    .action-btn:hover {
+        background-color: #f9fafb;
+    }
+    
+    .action-btn.primary {
+        background: #059669;
+        border-color: #059669;
+        color: white;
+    }
+    
+    .action-btn.primary:hover {
+        background: #047857;
+    }
+    
+    .action-btn.danger {
+        background: #dc2626;
+        border-color: #dc2626;
+        color: white;
+    }
+    
+    .action-btn.danger:hover {
+        background: #b91c1c;
+    }
+    
+    .property-card {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+    }
+    
+    .property-card:hover {
+        border-color: #d1d5db;
+    }
+    
+    .property-image {
+        background: white;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .status-badge {
+        font-size: 12px;
+        font-weight: 500;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+    
+    .status-available {
+        background: #dcfce7;
+        color: #166534;
+    }
+    
+    .status-sold {
+        background: #fee2e2;
+        color: #991b1b;
+    }
+    
+    .search-input {
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .search-input:focus {
+        outline: none;
+        border-color: #059669;
+    }
+    
+    .filter-select {
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-size: 14px;
+        background: white;
+    }
+    
+    .filter-select:focus {
+        outline: none;
+        border-color: #059669;
+    }
+    
+    .stats-item {
+        padding: 12px;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        background: white;
+    }
+    
+    .empty-state {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 48px 24px;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg-white min-h-screen">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+        
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb mb-4">
+            <a href="{{ url_for('manager_dashboard') }}" class="hover:underline">Дашборд</a>
+            <span class="mx-2">/</span>
+            <span>{{ presentation.title or 'Презентация' }}</span>
+        </nav>
+
+        <!-- Header -->
+        <div class="presentation-header p-6 mb-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900 mb-2">{{ presentation.title or 'Презентация' }}</h1>
+                    <div class="flex items-center gap-6 text-sm text-gray-600">
+                        <span>{{ presentation.properties_count or 0 }} объектов</span>
+                        <span>Создано {% if presentation.created_at %}{{ presentation.created_at.strftime('%d.%m.%Y') }}{% else %}-{% endif %}</span>
+                        {% if presentation.client_name %}
+                        <span>Клиент: {{ presentation.client_name }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-3">
+                    <div class="stats-item">
+                        <div class="text-lg font-bold text-gray-900">{{ presentation.view_count or 0 }}</div>
+                        <div class="text-xs text-gray-600">Просмотров</div>
+                    </div>
+                    
+                    {% if presentation.last_viewed_at %}
+                    <div class="stats-item">
+                        <div class="text-sm font-semibold text-gray-900">{% if presentation.last_viewed_at %}{{ presentation.last_viewed_at.strftime('%d.%m.%Y') }}{% else %}-{% endif %}</div>
+                        <div class="text-xs text-gray-600">Последний просмотр</div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Toolbar -->
+        <div class="toolbar p-4 mb-6">
+            <div class="flex items-center justify-between gap-4">
+                <!-- Search and filters -->
+                <div class="flex items-center gap-3">
+                    <input type="text" placeholder="Поиск объектов..." class="search-input w-64">
+                    <select class="filter-select">
+                        <option value="">Все типы</option>
+                        <option value="studio">Студия</option>
+                        <option value="1">1-комнатная</option>
+                        <option value="2">2-комнатная</option>
+                        <option value="3">3-комнатная</option>
+                        <option value="4+">4+ комнат</option>
+                    </select>
+                    <select class="filter-select">
+                        <option value="">Все статусы</option>
+                        <option value="available">Свободная</option>
+                        <option value="sold">Продано</option>
+                    </select>
+                </div>
+
+                <!-- Action buttons -->
+                <div class="flex items-center gap-2">
+                    <button data-action="send-email" data-presentation-id="{{ presentation.id or '' }}" 
+                            class="action-btn px-3 py-2 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                        </svg>
+                        На почту
+                    </button>
+                    
+                    <button data-action="download-all" data-presentation-id="{{ presentation.id or '' }}" 
+                            class="action-btn px-3 py-2 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        Скачать все
+                    </button>
+                    
+                    <button data-action="share-link" data-presentation-id="{{ presentation.id or '' }}" 
+                            class="action-btn px-3 py-2 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
+                        </svg>
+                        Ссылка
+                    </button>
+                    
+                    <button data-action="clear-all" data-presentation-id="{{ presentation.id or '' }}" 
+                            class="action-btn danger px-3 py-2 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                        Очистить
+                    </button>
+                    
+                    <button data-action="add-property" data-presentation-id="{{ presentation.id or '' }}" 
+                            class="action-btn primary px-3 py-2 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                        </svg>
+                        Добавить объект
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Properties Grid -->
+        {% if presentation.properties %}
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {% for property in presentation.properties %}
+            <div class="property-card" data-property-id="{{ property.property_id or '' }}">
+                
+                <!-- Property Image -->
+                <div class="property-image aspect-square relative">
+                    {% if property.layout_image %}
+                        <img src="{{ property.layout_image }}" alt="Планировка" class="w-full h-full object-contain p-4">
+                    {% elif property.main_image %}
+                        <img src="{{ property.main_image }}" alt="Объект" class="w-full h-full object-cover">
+                    {% else %}
+                        <div class="w-full h-full flex flex-col items-center justify-center text-gray-400">
+                            <svg class="w-12 h-12 mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm3 2h6v4H7V5zm8 8v2h1v-2h-1zm-2-2H7v4h6v-4z"/>
+                            </svg>
+                            <span class="text-sm">Изображение</span>
+                        </div>
+                    {% endif %}
+                    
+                    <!-- Status badge -->
+                    <div class="absolute top-2 right-2">
+                        {% if property.status == 'sold' %}
+                            <span class="status-badge status-sold">Продано</span>
+                        {% else %}
+                            <span class="status-badge status-available">Свободная</span>
+                        {% endif %}
+                    </div>
+                    
+                    <!-- Remove button -->
+                    <button data-action="remove-property" data-presentation-id="{{ presentation.id or '' }}" data-property-id="{{ property.property_id or '' }}" 
+                            class="absolute top-2 left-2 text-gray-400 hover:text-red-500 p-1 bg-white rounded-full" title="Удалить">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Property Info -->
+                <div class="p-4">
+                    <h3 class="font-semibold text-gray-900 mb-1">
+                        {% if property.rooms == 0 %}
+                            Студия{% if property.area %}, {{ property.area }} м²{% endif %}
+                        {% else %}
+                            {{ property.rooms or '?' }}-комн{% if property.area %}, {{ property.area }} м²{% endif %}
+                        {% endif %}
+                    </h3>
+                    
+                    <p class="text-sm text-gray-600 mb-2">{{ property.complex_name or 'Не указан' }}</p>
+                    
+                    <p class="text-lg font-bold text-gray-900 mb-3">
+                        {% if property.price and property.price is number %}
+                            {{ "{:,}".format(property.price|int).replace(",", " ") }} ₽
+                        {% else %}
+                            Цена не указана
+                        {% endif %}
+                    </p>
+                    
+                    <!-- Action buttons -->
+                    <div class="flex gap-2">
+                        <button data-action="view-property" data-presentation-id="{{ presentation.id or '' }}" data-property-id="{{ property.property_id or '' }}" 
+                                class="flex-1 action-btn primary px-3 py-2 text-center text-sm">
+                            Смотреть
+                        </button>
+                        <button data-action="download-property-pdf" data-presentation-id="{{ presentation.id or '' }}" data-property-id="{{ property.property_id or '' }}" 
+                                class="action-btn px-3 py-2 text-sm">
+                            PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Empty state -->
+        <div class="empty-state">
+            <svg class="w-16 h-16 mx-auto text-gray-400 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+            </svg>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Нет объектов в презентации</h3>
+            <p class="text-gray-600 mb-4">Добавьте объекты недвижимости, чтобы создать презентацию для клиента</p>
+            <button data-action="add-property" data-presentation-id="{{ presentation.id or '' }}" 
+                    class="action-btn primary px-4 py-2 inline-flex items-center gap-2">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                </svg>
+                Добавить первый объект
+            </button>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+<!-- JavaScript для обработки действий -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Обработка всех кнопок с data-action
+    document.addEventListener('click', function(e) {
+        const button = e.target.closest('[data-action]');
+        if (!button) return;
+        
+        const action = button.dataset.action;
+        const presentationId = button.dataset.presentationId;
+        const propertyId = button.dataset.propertyId;
+        
+        handleAction(action, presentationId, propertyId);
+    });
+    
+    function handleAction(action, presentationId, propertyId) {
+        console.log('Action:', action, 'Presentation:', presentationId, 'Property:', propertyId);
+        
+        switch(action) {
+            case 'add-property':
+                // Открыть модал добавления объекта
+                window.location.href = `/manager/presentations/${presentationId}/add-property`;
+                break;
+                
+            case 'remove-property':
+                if (confirm('Удалить объект из презентации?')) {
+                    removeProperty(presentationId, propertyId);
+                }
+                break;
+                
+            case 'view-property':
+                // Открыть детальный просмотр объекта
+                window.open(`/manager/presentations/${presentationId}/properties/${propertyId}`, '_blank');
+                break;
+                
+            case 'download-property-pdf':
+                // Скачать PDF объекта
+                downloadPropertyPDF(presentationId, propertyId);
+                break;
+                
+            case 'send-email':
+                // Отправить презентацию на email
+                sendPresentationEmail(presentationId);
+                break;
+                
+            case 'download-all':
+                // Скачать всю презентацию
+                downloadAllProperties(presentationId);
+                break;
+                
+            case 'share-link':
+                // Создать ссылку для поделиться
+                generateShareLink(presentationId);
+                break;
+                
+            case 'clear-all':
+                if (confirm('Очистить всю презентацию? Это действие нельзя отменить.')) {
+                    clearPresentation(presentationId);
+                }
+                break;
+        }
+    }
+    
+    function removeProperty(presentationId, propertyId) {
+        fetch(`/api/manager/presentations/${presentationId}/properties/${propertyId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Ошибка при удалении объекта');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ошибка при удалении объекта');
+        });
+    }
+    
+    function downloadPropertyPDF(presentationId, propertyId) {
+        window.open(`/api/manager/presentations/${presentationId}/properties/${propertyId}/pdf`, '_blank');
+    }
+    
+    function sendPresentationEmail(presentationId) {
+        const email = prompt('Введите email для отправки презентации:');
+        if (!email) return;
+        
+        fetch(`/api/manager/presentations/${presentationId}/send-email`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify({ email: email })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Презентация отправлена на email');
+            } else {
+                alert('Ошибка при отправке');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ошибка при отправке');
+        });
+    }
+    
+    function downloadAllProperties(presentationId) {
+        window.open(`/api/manager/presentations/${presentationId}/download-all`, '_blank');
+    }
+    
+    function generateShareLink(presentationId) {
+        fetch(`/api/manager/presentations/${presentationId}/generate-link`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success && data.link) {
+                navigator.clipboard.writeText(data.link).then(() => {
+                    alert(`Ссылка скопирована в буфер обмена:\n${data.link}`);
+                });
+            } else {
+                alert('Ошибка при создании ссылки');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ошибка при создании ссылки');
+        });
+    }
+    
+    function clearPresentation(presentationId) {
+        fetch(`/api/manager/presentations/${presentationId}/clear`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                location.reload();
+            } else {
+                alert('Ошибка при очистке презентации');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Ошибка при очистке презентации');
+        });
+    }
+    
+    // Поиск объектов
+    const searchInput = document.querySelector('.search-input');
+    if (searchInput) {
+        searchInput.addEventListener('input', debounce(function(e) {
+            filterProperties();
+        }, 300));
+    }
+    
+    // Фильтры
+    const filterSelects = document.querySelectorAll('.filter-select');
+    filterSelects.forEach(select => {
+        select.addEventListener('change', filterProperties);
+    });
+    
+    function filterProperties() {
+        const searchTerm = searchInput?.value.toLowerCase() || '';
+        const typeFilter = document.querySelector('.filter-select').value;
+        const statusFilter = document.querySelectorAll('.filter-select')[1].value;
+        
+        const cards = document.querySelectorAll('.property-card');
+        
+        cards.forEach(card => {
+            const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const complex = card.querySelector('p')?.textContent.toLowerCase() || '';
+            const status = card.querySelector('.status-badge')?.textContent.includes('Продано') ? 'sold' : 'available';
+            
+            const matchesSearch = title.includes(searchTerm) || complex.includes(searchTerm);
+            const matchesType = !typeFilter || title.includes(typeFilter === 'studio' ? 'студия' : typeFilter + '-комн');
+            const matchesStatus = !statusFilter || status === statusFilter;
+            
+            if (matchesSearch && matchesType && matchesStatus) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ property.name or 'Объект недвижимости' }} - {{ presentation.title }}</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.4;
+            color: #1f2937;
+            background: white;
+            font-size: 14px;
+        }
+        
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 25mm 20mm;
+            background: white;
+            page-break-after: always;
+            position: relative;
+        }
+        
+        .page:last-child {
+            page-break-after: avoid;
+        }
+        
+        /* Header with manager info */
+        .manager-header {
+            position: absolute;
+            top: 15mm;
+            right: 20mm;
+            text-align: right;
+            font-size: 11px;
+            color: #4b5563;
+            line-height: 1.3;
+        }
+        
+        .manager-name {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 2px;
+        }
+        
+        .manager-contact {
+            color: #6b7280;
+        }
+        
+        /* Page titles */
+        .page-title {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin: 40mm 0 30mm;
+            color: #1f2937;
+            line-height: 1.2;
+        }
+        
+        .page-subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 5mm;
+        }
+        
+        /* Floor plan section */
+        .floor-plan-section {
+            text-align: center;
+            margin: 20mm 0;
+        }
+        
+        .floor-plan-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10mm;
+            color: #1f2937;
+        }
+        
+        .floor-plan-image {
+            max-width: 140mm;
+            max-height: 100mm;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin: 0 auto;
+            display: block;
+            background: #f9fafb;
+            padding: 10px;
+        }
+        
+        /* Property details table */
+        .details-table {
+            width: 100%;
+            margin: 20mm 0;
+            border-collapse: collapse;
+        }
+        
+        .details-row {
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .details-label {
+            font-weight: 500;
+            color: #374151;
+            padding: 8px 15px 8px 0;
+            width: 50%;
+            vertical-align: top;
+        }
+        
+        .details-value {
+            color: #1f2937;
+            padding: 8px 0;
+            font-weight: 600;
+            vertical-align: top;
+        }
+        
+        .price-highlight {
+            font-size: 18px;
+            color: #059669;
+            font-weight: 700;
+        }
+        
+        /* Section headers */
+        .section-header {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 25mm 0 10mm;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 5mm;
+        }
+        
+        /* Description section */
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #374151;
+            margin: 10mm 0;
+            text-align: justify;
+        }
+        
+        /* Map section */
+        .map-section {
+            margin: 15mm 0;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            width: 160mm;
+            height: 80mm;
+            background: #f3f4f6;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10mm auto;
+            color: #6b7280;
+            font-size: 16px;
+        }
+        
+        .location-info {
+            background: #f9fafb;
+            padding: 10mm;
+            border-radius: 8px;
+            margin: 10mm 0;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .location-address {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+        
+        .location-note {
+            color: #6b7280;
+            font-style: italic;
+        }
+        
+        /* Complex advantages grid */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15mm;
+            margin: 15mm 0;
+        }
+        
+        .advantage-item {
+            text-align: center;
+            padding: 8mm;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .advantage-icon {
+            font-size: 24px;
+            margin-bottom: 5mm;
+        }
+        
+        .advantage-title {
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 3mm;
+            color: #1f2937;
+        }
+        
+        .advantage-desc {
+            font-size: 10px;
+            color: #6b7280;
+        }
+        
+        /* Images grid */
+        .images-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10mm;
+            margin: 15mm 0;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+        
+        .image-container img {
+            width: 100%;
+            max-height: 60mm;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 5mm;
+        }
+        
+        .image-caption {
+            font-size: 11px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        .page-footer {
+            position: absolute;
+            bottom: 15mm;
+            left: 20mm;
+            right: 20mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 5mm;
+            font-size: 10px;
+            color: #9ca3af;
+        }
+        
+        .footer-date {
+            font-weight: 500;
+        }
+        
+        .page-number {
+            font-weight: 600;
+        }
+        
+        /* Status indicators */
+        .status-available { color: #059669; background: #d1fae5; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+        .status-sold { color: #dc2626; background: #fee2e2; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+        .status-reserved { color: #d97706; background: #fef3c7; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+        
+        @page {
+            margin: 0;
+            size: A4;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Page 1: Title and Floor Plan -->
+    <div class="page">
+        <div class="manager-header">
+            <div class="manager-name">{{ manager.full_name if manager else 'Ваш персональный менеджер, InBack' }}</div>
+            <div class="manager-contact">{{ manager.email if manager else 'info@inback.ru' }}</div>
+            <div class="manager-contact">{{ manager.phone if manager else '+7 (861) 000-00-00' }}</div>
+        </div>
+        
+        <div class="page-title">
+            {% if property.rooms == 0 %}
+                Студия, {{ property.area or property.size }} м²
+            {% else %}
+                {{ property.rooms or 1 }}-к.кв. {{ property.complex_name or 'ЖК' }}{% if property.building %}, корпус {{ property.building }}{% endif %}
+            {% endif %}
+        </div>
+        
+        <div class="floor-plan-section">
+            <div class="floor-plan-title">Поэтажный план</div>
+            {% if property.layout_image %}
+                <img src="{{ property.layout_image }}" 
+                     alt="Планировка" class="floor-plan-image">
+            {% else %}
+                <div class="floor-plan-image" style="display: flex; align-items: center; justify-content: center; color: #9ca3af;">
+                    Планировка будет предоставлена по запросу
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="page-footer">
+            <div class="footer-date">Презентация создана {{ current_date }}</div>
+            <div class="page-number">1</div>
+        </div>
+    </div>
+    
+    <!-- Page 2: Property Details -->
+    <div class="page">
+        <div class="manager-header">
+            <div class="manager-name">{{ manager.full_name if manager else 'Ваш персональный менеджер, InBack' }}</div>
+            <div class="manager-contact">{{ manager.email if manager else 'info@inback.ru' }}</div>
+            <div class="manager-contact">{{ manager.phone if manager else '+7 (861) 000-00-00' }}</div>
+        </div>
+        
+        <div class="section-header">О квартире</div>
+        
+        <table class="details-table">
+            <tr class="details-row">
+                <td class="details-label">Цена, 100% оплата</td>
+                <td class="details-value price-highlight">{{ "{:,.0f}".format(property.price or 0).replace(',', ' ') }} ₽</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Цена за м² при 100% оплате</td>
+                <td class="details-value">{{ "{:,.0f}".format(property.price_per_sqm or 0).replace(',', ' ') }} ₽</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Квартира</td>
+                <td class="details-value">
+                    {% if property.status == 'available' %}
+                        <span class="status-available">Доступно</span>
+                    {% elif property.status == 'sold' %}
+                        <span class="status-sold">Продано</span>
+                    {% else %}
+                        <span class="status-reserved">Резерв</span>
+                    {% endif %}
+                </td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">S общая</td>
+                <td class="details-value">{{ property.area or property.size or 0 }} м²</td>
+            </tr>
+            {% if property.living_area and property.living_area > 0 %}
+            <tr class="details-row">
+                <td class="details-label">S жилая</td>
+                <td class="details-value">{{ property.living_area }} м²</td>
+            </tr>
+            {% endif %}
+            {% if property.kitchen_area and property.kitchen_area > 0 %}
+            <tr class="details-row">
+                <td class="details-label">S кухни</td>
+                <td class="details-value">{{ property.kitchen_area }} м²</td>
+            </tr>
+            {% endif %}
+            {% if property.balcony %}
+            <tr class="details-row">
+                <td class="details-label">Тип балкона</td>
+                <td class="details-value">{{ 'Есть' if property.balcony == True else property.balcony }}</td>
+            </tr>
+            {% endif %}
+            {% if property.apartment_number %}
+            <tr class="details-row">
+                <td class="details-label">Номер квартиры</td>
+                <td class="details-value">{{ property.apartment_number }}</td>
+            </tr>
+            {% else %}
+            <tr class="details-row">
+                <td class="details-label">Номер квартиры</td>
+                <td class="details-value">ID {{ property.id }}</td>
+            </tr>
+            {% endif %}
+            <tr class="details-row">
+                <td class="details-label">Этаж / Этажность</td>
+                <td class="details-value">{{ property.floor or 'н/д' }} / {{ property.total_floors or property.floors_total or 'н/д' }}</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Отделка</td>
+                <td class="details-value">{{ property.renovation or 'Не указана' }}</td>
+            </tr>
+            {% if property.windows_direction %}
+            <tr class="details-row">
+                <td class="details-label">Окна</td>
+                <td class="details-value">{{ property.windows_direction }}</td>
+            </tr>
+            {% endif %}
+            {% if property.view %}
+            <tr class="details-row">
+                <td class="details-label">Вид из окна</td>
+                <td class="details-value">{{ property.view }}</td>
+            </tr>
+            {% endif %}
+        </table>
+        
+        <div class="page-footer">
+            <div class="footer-date">Презентация создана {{ current_date }}</div>
+            <div class="page-number">2</div>
+        </div>
+    </div>
+    
+    <!-- Page 3: Description and Location -->
+    <div class="page">
+        <div class="manager-header">
+            <div class="manager-name">{{ manager.full_name if manager else 'Ваш персональный менеджер, InBack' }}</div>
+            <div class="manager-contact">{{ manager.email if manager else 'info@inback.ru' }}</div>
+            <div class="manager-contact">{{ manager.phone if manager else '+7 (861) 000-00-00' }}</div>
+        </div>
+        
+        <div class="section-header">Описание</div>
+        
+        <div class="description">
+            {% if property.description and property.description.strip() %}
+                {{ property.description }}
+            {% elif collection_property and collection_property.manager_note %}
+                {{ collection_property.manager_note }}
+            {% else %}
+                {% if property.rooms == 0 %}
+                    Просторная студия в современном жилом комплексе {{ property.complex_name or '' }}.
+                {% else %}
+                    Просторная {{ property.rooms }}-комнатная квартира в современном жилом комплексе {{ property.complex_name or '' }}.
+                {% endif %}
+                
+                {% if property.area or property.size %}
+                    Общая площадь составляет {{ property.area or property.size }} м².
+                {% endif %}
+                
+                {% if property.renovation and property.renovation != 'Не указана' %}
+                    Квартира сдается с {{ property.renovation.lower() }}.
+                {% endif %}
+                
+                {% if property.floor and property.total_floors %}
+                    Расположена на {{ property.floor }} этаже {{ property.total_floors }}-этажного дома.
+                {% endif %}
+            {% endif %}
+        </div>
+        
+        <div class="section-header">Расположение на карте</div>
+        
+        <div class="map-section">
+            {% if property.latitude and property.longitude %}
+            <div class="map-placeholder">
+                <img src="https://static-maps.yandex.ru/1.x/?lang=ru_RU&ll={{ property.longitude }},{{ property.latitude }}&z=15&l=map&size=600,300&pt={{ property.longitude }},{{ property.latitude }},pm2rdm" 
+                     alt="Карта местоположения" style="width: 100%; height: 100%; object-fit: cover; border-radius: 6px;">
+            </div>
+            {% else %}
+            <div class="map-placeholder">
+                📍 Карта: {{ property.address or (property.complex_name + ', Краснодар') }}
+            </div>
+            {% endif %}
+            
+            <div class="location-info">
+                <div class="location-address">
+                    {{ property.address or (property.complex_name + ', Краснодар') }}
+                </div>
+                <div class="location-note">
+                    {{ property.district or 'Краснодар' }} · До центра удобная транспортная доступность
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-footer">
+            <div class="footer-date">Презентация создана {{ current_date }}</div>
+            <div class="page-number">3</div>
+        </div>
+    </div>
+    
+    <!-- Page 4: Object Information -->
+    <div class="page">
+        <div class="manager-header">
+            <div class="manager-name">{{ manager.full_name if manager else 'Ваш персональный менеджер, InBack' }}</div>
+            <div class="manager-contact">{{ manager.email if manager else 'info@inback.ru' }}</div>
+            <div class="manager-contact">{{ manager.phone if manager else '+7 (861) 000-00-00' }}</div>
+        </div>
+        
+        <div class="section-header">Об объекте</div>
+        
+        <table class="details-table">
+            <tr class="details-row">
+                <td class="details-label">Срок сдачи</td>
+                <td class="details-value">{{ property.completion_date or 'Уточняется' }}</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Дата старта продаж</td>
+                <td class="details-value">{{ property.sales_start_date or 'Уточняется' }}</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Застройщик</td>
+                <td class="details-value">{{ property.developer or property.developer_name or 'Уточняется' }}</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Класс недвижимости</td>
+                <td class="details-value">{{ property.complex_object_class_display_name or property.class_type or 'Комфорт' }}</td>
+            </tr>
+            {% if property.building %}
+            <tr class="details-row">
+                <td class="details-label">Корпус</td>
+                <td class="details-value">{{ property.building }}</td>
+            </tr>
+            {% endif %}
+            <tr class="details-row">
+                <td class="details-label">Тип дома</td>
+                <td class="details-value">{{ property.construction_type or 'Монолитный' }}</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Фасад</td>
+                <td class="details-value">{{ property.facade_type or 'Навесной вентфасад' }}</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Паркинг</td>
+                <td class="details-value">{{ property.parking_type or 'Наземная стоянка' }}</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Лифт</td>
+                <td class="details-value">{{ property.elevator_type or 'Пассажирский и грузовой' }}</td>
+            </tr>
+            {% if property.ceiling_height and property.ceiling_height > 0 %}
+            <tr class="details-row">
+                <td class="details-label">Высота потолков</td>
+                <td class="details-value">{{ property.ceiling_height }} м</td>
+            </tr>
+            {% endif %}
+            <tr class="details-row">
+                <td class="details-label">Договор</td>
+                <td class="details-value">{{ property.contract_type or 'ДДУ' }}</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Оплата</td>
+                <td class="details-value">100% оплата, ипотека</td>
+            </tr>
+            <tr class="details-row">
+                <td class="details-label">Эскроу</td>
+                <td class="details-value">{{ property.escrow_available and 'Да' or 'Нет' }}</td>
+            </tr>
+        </table>
+        
+        <div class="page-footer">
+            <div class="footer-date">Презентация создана {{ current_date }}</div>
+            <div class="page-number">4</div>
+        </div>
+    </div>
+    
+    <!-- Page 5: Complex Advantages -->
+    <div class="page">
+        <div class="manager-header">
+            <div class="manager-name">{{ manager.full_name if manager else 'Ваш персональный менеджер, InBack' }}</div>
+            <div class="manager-contact">{{ manager.email if manager else 'info@inback.ru' }}</div>
+            <div class="manager-contact">{{ manager.phone if manager else '+7 (861) 000-00-00' }}</div>
+        </div>
+        
+        <div class="section-header">Описание и преимущества ЖК</div>
+        
+        <div class="advantages-grid">
+            <div class="advantage-item">
+                <div class="advantage-icon">🏫</div>
+                <div class="advantage-title">Развитая инфраструктура</div>
+                <div class="advantage-desc">Школы и детские сады в шаговой доступности</div>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">🏞️</div>
+                <div class="advantage-title">Зеленая зона</div>
+                <div class="advantage-desc">Благоустроенная территория с парковыми зонами</div>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">🏃</div>
+                <div class="advantage-title">Спорт и отдых</div>
+                <div class="advantage-desc">Спортивные площадки и зоны отдыха</div>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">🚗</div>
+                <div class="advantage-title">Паркинг</div>
+                <div class="advantage-desc">Места для автомобилей жителей</div>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">🛒</div>
+                <div class="advantage-title">Магазины</div>
+                <div class="advantage-desc">Торговые объекты на первых этажах</div>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon">🚌</div>
+                <div class="advantage-title">Транспорт</div>
+                <div class="advantage-desc">Удобная транспортная доступность</div>
+            </div>
+        </div>
+        
+        <div class="description">
+            {{ property.complex_name or 'Жилой комплекс' }} — это современный комплекс, спроектированный с учетом всех потребностей городской жизни.
+            
+            {% if property.developer or property.developer_name %}
+            Застройщик — {{ property.developer or property.developer_name }}, известный качественной и своевременной сдачей объектов.
+            {% endif %}
+            
+            Комплекс отличается продуманной планировкой, качественными материалами и современными технологиями строительства.
+            Развитая инфраструктура района обеспечивает комфортное проживание для всей семьи.
+            
+            {% if property.district %}
+            Расположение в {{ property.district }} обеспечивает легкий доступ ко всем городским удобствам при сохранении тишины и спокойствия жилого района.
+            {% endif %}
+        </div>
+        
+        <div class="page-footer">
+            <div class="footer-date">Презентация создана {{ current_date }}</div>
+            <div class="page-number">5</div>
+        </div>
+    </div>
+    
+    <!-- Page 6: Images -->
+    <div class="page">
+        <div class="manager-header">
+            <div class="manager-name">{{ manager.full_name if manager else 'Ваш персональный менеджер, InBack' }}</div>
+            <div class="manager-contact">{{ manager.email if manager else 'info@inback.ru' }}</div>
+            <div class="manager-contact">{{ manager.phone if manager else '+7 (861) 000-00-00' }}</div>
+        </div>
+        
+        <div class="section-header">Изображения ЖК</div>
+        
+        {% if property.images and property.images|length > 0 %}
+        <div class="images-grid">
+            {% for image in property.images[:4] %}
+            <div class="image-container">
+                <img src="{{ image }}" alt="Изображение {{ loop.index }}">
+                <div class="image-caption">
+                    {% if loop.index == 1 %}Общий вид{% elif loop.index == 2 %}Фасад здания{% elif loop.index == 3 %}Территория комплекса{% else %}Инфраструктура{% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="description">
+            Фотографии жилого комплекса будут предоставлены по запросу.
+            Обращайтесь к вашему персональному менеджеру для получения актуальных изображений объекта.
+        </div>
+        {% endif %}
+        
+        <div class="section-header" style="margin-top: 20mm;">Ход строительства</div>
+        
+        {% if property.complex_info and property.complex_info.construction_progress %}
+        <div class="images-grid">
+            {% for progress_image in property.complex_info.construction_progress[:4] %}
+            <div class="image-container">
+                <img src="{{ progress_image.url }}" alt="Строительство {{ progress_image.date }}">
+                <div class="image-caption">{{ progress_image.date }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="images-grid">
+            <div class="image-container">
+                <div style="background: #f3f4f6; height: 60mm; display: flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e5e7eb; color: #9ca3af;">
+                    Фото стройки
+                </div>
+                <div class="image-caption">Актуальные фото</div>
+            </div>
+            <div class="image-container">
+                <div style="background: #f3f4f6; height: 60mm; display: flex; align-items: center; justify-content: center; border-radius: 6px; border: 1px solid #e5e7eb; color: #9ca3af;">
+                    Ход строительства
+                </div>
+                <div class="image-caption">По запросу</div>
+            </div>
+        </div>
+        {% endif %}
+        
+        <div class="page-footer">
+            <div class="footer-date">Презентация создана {{ current_date }}</div>
+            <div class="page-number">6</div>
+        </div>
+    </div>
+
+</body>
+</html>

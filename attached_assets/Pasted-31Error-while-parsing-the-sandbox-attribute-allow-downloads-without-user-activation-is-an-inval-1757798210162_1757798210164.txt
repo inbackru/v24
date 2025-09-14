@@ -1,0 +1,391 @@
+31Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'ambient-light-sensor'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'battery'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'execution-while-not-rendered'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'execution-while-out-of-viewport'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'layout-animations'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'legacy-image-formats'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'navigation-override'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'oversized-images'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'publickey-credentials'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'speaker-selection'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'unoptimized-images'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Unrecognized feature: 'unsized-media'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Allow attribute will take precedence over 'allowfullscreen'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/__replco/workspace_iframe.html?initialPath=%2F&id=%3Ard2%3A:32 Allow attribute will take precedence over 'allowpaymentrequest'.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/fine_finish.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/rough_finish.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/rough_finish.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/fine_finish.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/rough_finish.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/fine_finish.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/object/1999611557/pdf:1  Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/api/manager/presentation/create-with-property:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/object/1999611557/pdf:1  Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/object/2058093385/pdf:1  Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/agent-photo.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/object/2055669531/pdf:1  Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/api/manager/presentation/3/add-property:1  Failed to load resource: the server responded with a status of 400 (Bad Request)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/object/2061137174/pdf:1  Failed to load resource: the server responded with a status of 500 (Internal Server Error)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/api/user/favorites:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/api/favorites/count:1  Failed to load resource: the server responded with a status of 401 (Unauthorized)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/api/favorites/count:1  Failed to load resource: the server responded with a status of 401 (Unauthorized)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+10The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+10The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+10The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+stallwart.build.js:1 stallwart: failed ping 1
+v23:1 The source list for the Content Security Policy directive 'default-src' contains an invalid source: ''unsafe-dynamic''. It will be ignored.
+v23:1 The Content-Security-Policy directive 'default-src' contains 'report-uri' as a source expression. Did you want to add it as a directive and forget a semicolon?
+v23:1 The source list for Content Security Policy directive 'default-src' contains a source with an invalid path: '/api/4509669501698048/security/?sentry_key=7eb3d90eb4660416caf507087367e67e'. The query component, including the '?', will be ignored.
+_app-1ae87f7f7b922a17.js:38 
+      /////////////////////
+   ///////////////////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////        Curious and driven?
+  ///////////////@@@@@@@///////        Work with us!
+  ///////////////@@@@@@@///////
+  ///////////////@@@@@@@///////        https://join.replit.com/hack.with.us
+  ////////@@@@@@@//////////////
+  ////////@@@@@@@//////////////
+  ////////@@@@@@#//////////////
+   ///////////////////////////
+      /////////////////////
+      
+_app-1ae87f7f7b922a17.js:38 [LaunchDarkly] LaunchDarkly client initialized
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'battery'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-87e4a596bb9cb438.js:1
+framework-87e4a596bb9cb438.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-87e4a596bb9cb438.js:1
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+v23:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+2Console.js:61 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+Mt.forEach.n.<computed> @ Console.js:61
+Console.js:61 Header: openApplicationModal function defined
+Console.js:61 Hero search fully disabled - SuperSearch handles everything
+Console.js:61 Hero search handlers removed - SuperSearch manages everything
+Console.js:61 DOM Helper initialized - safe DOM operations available
+Console.js:61 Fixing find button...
+Console.js:61 Found buttons: 0
+2Console.js:61 Phone formatting setup for: phone
+Console.js:61 InBack form validation initialized
+Console.js:61 Performance optimizations initialized
+Console.js:61 CSS optimization: Found 4 stylesheets
+Console.js:61 Turbo loader initialized
+Console.js:61 Cache optimizer initialized
+Console.js:61 Image compressor initialized - WebP support: true
+Console.js:61 🚀 Performance Optimizer v2.0 - Starting...
+Console.js:61 🖼️ Lazy loading initialized for 0 images
+Console.js:61 ✅ Performance Optimizer initialized
+Console.js:61 🚀 SuperSearch v2.0 - Initializing...
+Console.js:61 Found 1 search inputs
+Console.js:61 Initializing smart search...
+Console.js:61 Hero search initialized
+Console.js:61 Form validation initialized
+Console.js:61 Cache SW failed: [object DOMException]
+Console.js:61 Carousel element not found, skipping initialization
+Mt.forEach.n.<computed> @ Console.js:61
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/aleksandr_petrov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/dmitriy_ivanov.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/images/elena_smirnova.webp:1  Failed to load resource: the server responded with a status of 404 (Not Found)
+Console.js:61 📊 Performance metrics: [object Object]
+Console.js:61 Error loading featured properties: TypeError: Cannot set properties of null (setting 'innerHTML')
+Mt.forEach.n.<computed> @ Console.js:61
+Console.js:61 Real favorites count from API: 0
+Console.js:61 Memory usage: [object Object]
+Console.js:61 Carousel element not found in nextCase
+Mt.forEach.n.<computed> @ Console.js:61
+Console.js:61 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+Mt.forEach.n.<computed> @ Console.js:61
+Console.js:61 Header: openApplicationModal function defined
+Console.js:61 🚀 Defining critical functions FIRST...
+Console.js:61 ✅ loadClients function defined at top: function
+Console.js:61 ✅ loadRecommendations function defined at top: function
+Console.js:61 ✅ loadManagerSavedSearches function defined at top: function
+Console.js:61 ✅ Saved searches functions defined
+Console.js:61 DOM Helper initialized - safe DOM operations available
+2Console.js:61 Phone formatting setup for: phone
+Console.js:61 InBack form validation initialized
+Console.js:61 Performance optimizations initialized
+Console.js:61 CSS optimization: Found 4 stylesheets
+Console.js:61 Turbo loader initialized
+Console.js:61 Cache optimizer initialized
+Console.js:61 Image compressor initialized - WebP support: true
+Console.js:61 🔄 Loading clients...
+Console.js:61 Manager dashboard DOMContentLoaded - initializing...
+Console.js:61 🎯 Dashboard overview selected - loading recent recommendations
+Console.js:61 🔄 Loading recent recommendations...
+Console.js:61 🌟 Loading adaptive welcome message...
+Console.js:61 🚀 Performance Optimizer v2.0 - Starting...
+Console.js:61 🖼️ Lazy loading initialized for 0 images
+Console.js:61 ✅ Performance Optimizer initialized
+Console.js:61 🚀 SuperSearch v2.0 - Initializing...
+Console.js:61 Found 0 search inputs
+Console.js:61 Initializing smart search...
+Console.js:61 Form validation initialized
+Console.js:61 📊 Page Load Time: 6639ms
+Console.js:61 📊 Performance metrics: [object Object]
+Console.js:61 Cache SW failed: [object DOMException]
+Console.js:61 Starting data load...
+Console.js:61 🔄 Loading clients...
+Console.js:61 Loading recommendations...
+Console.js:61 🔄 Loading recent recommendations...
+Console.js:61 🌟 Loading adaptive welcome message...
+Console.js:61 🎯 Presentations section selected - calling loadPresentations
+Console.js:61 📡 Response status: 200
+Console.js:61 📊 Clients data received: [object Object]
+Console.js:61 ✅ Success! Displaying 10 clients
+Console.js:61 📝 Displaying clients: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+Console.js:61 📡 Recent recommendations response status: 200
+Console.js:61 📊 Recent recommendations data received: [object Object]
+Console.js:61 📡 Welcome message response status: 200
+Console.js:61 📊 Welcome message data received: [object Object]
+Console.js:61 ✅ Welcome message loaded successfully
+Console.js:61 Real favorites count from API: 0
+Console.js:61 Memory usage: [object Object]
+Console.js:61 Response status: 200
+Console.js:61 Raw response: {"presentations":[{"client_name":"\u043a\u0440\u0438\u0441\u0442\u0438\u043d\u0430","client_phone":"","collection_type":"presentation","created_at":"2025-09-13T17:02:39.278487","description":"neweweew","id":4,"is_public":false,"last_viewed_at":"2025-09-13T20:20:08.304550","properties":[{"address":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439, \u0421\u043e\u0447\u0438, \u041a\u0443\u0434\u0435\u043f\u0441\u0442\u0430 \u043c-\u043d, \u0418\u0441\u043a\u0440\u044b, 88 \u043b\u0438\u04427","area":"23.40","balcony_count":0,"cashback":500000,"complex_name":"\u0416\u041a \"\u041b\u0435\u0442\u043d\u0438\u0439\"","developer":"AVA","district":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","floor":1,"id":1999611557,"layout_image":"https://imgdmclkru.klassified.ru/vitrina/d1/e2/d1e2240381cf00a1023321520171c950ca1c6f09.jpg","loggia_count":0,"main_image":"https://imgdmclkru.klassified.ru/vitrina/d1/e2/d1e2240381cf00a1023321520171c950ca1c6f09.jpg","manager_note":null,"order_index":1,"price":8166600,"price_per_sqm":349000,"property_id":"1999611557","property_type":"\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430","renovation_display_name":"","rooms":0,"status":"available","title":"\u0421\u0442\u0443\u0434\u0438\u044f, 23.40 \u043c\u00b2","total_floors":12},{"address":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439, \u0421\u043e\u0447\u0438, \u041a\u0443\u0434\u0435\u043f\u0441\u0442\u0430 \u043c-\u043d, \u0418\u0441\u043a\u0440\u044b, 88 \u043b\u0438\u04427","area":"23.90","balcony_count":0,"cashback":500000,"complex_name":"\u0416\u041a \"\u041b\u0435\u0442\u043d\u0438\u0439\"","developer":"AVA","district":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","floor":1,"id":1999611558,"layout_image":"https://imgdmclkru.klassified.ru/vitrina/7b/80/7b80328537d1001376e0aabffc7f57e0f1c52990.jpg","loggia_count":0,"main_image":"https://imgdmclkru.klassified.ru/vitrina/7b/80/7b80328537d1001376e0aabffc7f57e0f1c52990.jpg","manager_note":null,"order_index":2,"price":8341100,"price_per_sqm":349000,"property_id":"1999611558","property_type":"\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430","renovation_display_name":"","rooms":0,"status":"available","title":"\u0421\u0442\u0443\u0434\u0438\u044f, 23.90 \u043c\u00b2","total_floors":12},{"address":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439, \u0421\u043e\u0447\u0438, \u041a\u0443\u0434\u0435\u043f\u0441\u0442\u0430 \u043c-\u043d, \u0418\u0441\u043a\u0440\u044b, 88 \u043b\u0438\u04427","area":"24.20","balcony_count":0,"cashback":500000,"complex_name":"\u0416\u041a \"\u041b\u0435\u0442\u043d\u0438\u0439\"","developer":"AVA","district":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","floor":1,"id":1999611566,"layout_image":"https://imgdmclkru.klassified.ru/vitrina/f9/e4/f9e42f064885e35e5a5a5869e64d5ddb27a46b5e.jpg","loggia_count":0,"main_image":"https://imgdmclkru.klassified.ru/vitrina/f9/e4/f9e42f064885e35e5a5a5869e64d5ddb27a46b5e.jpg","manager_note":null,"order_index":3,"price":8445800,"price_per_sqm":349000,"property_id":"1999611566","property_type":"\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430","renovation_display_name":"","rooms":0,"status":"available","title":"\u0421\u0442\u0443\u0434\u0438\u044f, 24.20 \u043c\u00b2","total_floors":12},{"address":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439, \u0421\u043e\u0447\u0438, \u042f\u0441\u043d\u043e\u0433\u043e\u0440\u0441\u043a\u0430\u044f, 16/2 \u043b\u0438\u04426","area":"20.67","balcony_count":0,"cashback":500000,"complex_name":"\u0416\u041a \"\u041a\u0438\u0441\u043b\u043e\u0440\u043e\u0434\"","developer":"AVA","district":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","floor":2,"id":2060712788,"layout_image":"https://imgdmclkru.klassified.ru/vitrina/00/4e/004e1adf77e3cb01f5d35826f3a65dc8436bbe3a.jpg","loggia_count":0,"main_image":"https://imgdmclkru.klassified.ru/vitrina/00/4e/004e1adf77e3cb01f5d35826f3a65dc8436bbe3a.jpg","manager_note":null,"order_index":4,"price":8753745,"price_per_sqm":423500,"property_id":"2060712788","property_type":"\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430","renovation_display_name":"","rooms":0,"status":"available","title":"\u0421\u0442\u0443\u0434\u0438\u044f, 20.67 \u043c\u00b2","total_floors":2}],"property_count":4,"status":"\u04
+Console.js:61 🎯 FORCE-UPDATE-210734 displayPresentations called with: 3 presentations
+Console.js:61 📊 First presentation sample: [object Object]
+Console.js:61 📡 Response status: 200
+Console.js:61 📊 Clients data received: [object Object]
+Console.js:61 ✅ Success! Displaying 10 clients
+Console.js:61 📝 Displaying clients: [object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]
+Console.js:61 Recommendations data received: [object Object]
+Console.js:61 📦 Preloaded: /static/css/styles.css
+Console.js:61 📦 Preloaded: /static/js/super_search.js
+Console.js:61 📦 Preloaded: /static/js/main.js
+Console.js:61 📊 Performance metrics: [object Object]
+Console.js:61 📡 Welcome message response status: 200
+Console.js:61 📊 Welcome message data received: [object Object]
+Console.js:61 ✅ Welcome message loaded successfully
+Console.js:61 📡 Recent recommendations response status: 200
+Console.js:61 📊 Recent recommendations data received: [object Object]
+Console.js:61 Memory usage: [object Object]
+Console.js:61 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+Mt.forEach.n.<computed> @ Console.js:61
+Console.js:61 cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+Mt.forEach.n.<computed> @ Console.js:61
+Console.js:61 Header: openApplicationModal function defined
+Console.js:61 🚀 Defining critical functions FIRST...
+Console.js:61 ✅ loadClients function defined at top: function
+Console.js:61 ✅ loadRecommendations function defined at top: function
+Console.js:61 ✅ loadManagerSavedSearches function defined at top: function
+Console.js:61 ✅ Saved searches functions defined
+Console.js:61 DOM Helper initialized - safe DOM operations available
+2Console.js:61 Phone formatting setup for: phone
+Console.js:61 InBack form validation initialized
+Console.js:61 Performance optimizations initialized
+Console.js:61 CSS optimization: Found 4 stylesheets
+Console.js:61 Turbo loader initialized
+Console.js:61 Cache optimizer initialized
+Console.js:61 Image compressor initialized - WebP support: true
+Console.js:61 🔄 Loading clients...
+Console.js:61 Manager dashboard DOMContentLoaded - initializing...
+Console.js:61 🎯 Dashboard overview selected - loading recent recommendations
+Console.js:61 🔄 Loading recent recommendations...
+Console.js:61 🌟 Loading adaptive welcome message...
+Console.js:61 🚀 Performance Optimizer v2.0 - Starting...
+Console.js:61 🖼️ Lazy loading initialized for 0 images
+Console.js:61 ✅ Performance Optimizer initialized
+Console.js:61 🚀 SuperSearch v2.0 - Initializing...
+Console.js:61 Found 0 search inputs
+Console.js:61 Initializing smart search...
+Console.js:61 Form validation initialized
+Console.js:61 📊 Page Load Time: 3739ms
+Console.js:61 📊 Performance metrics: Object
+Console.js:61 Cache SW failed: SecurityError: Failed to register a ServiceWorker for scope ('https://1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/') with script ('https://1110d5e6-6365-4046-b671-64df42731a79-00-1tb4ivpw3n3n4.janeway.replit.dev/static/js/sw-cache.js'): The path of the provided scope ('/') is not under the max scope allowed ('/static/js/'). Adjust the scope, move the Service Worker script, or use the Service-Worker-Allowed HTTP header to allow the scope.
+Console.js:61 Starting data load...
+Console.js:61 🔄 Loading clients...
+Console.js:61 Loading recommendations...
+Console.js:61 🔄 Loading recent recommendations...
+Console.js:61 🌟 Loading adaptive welcome message...
+Console.js:61 📡 Response status: 200
+Console.js:61 📊 Clients data received: Object
+Console.js:61 ✅ Success! Displaying 10 clients
+Console.js:61 📝 Displaying clients: Array(10)
+Console.js:61 📡 Recent recommendations response status: 200
+Console.js:61 📊 Recent recommendations data received: Object
+Console.js:61 🎯 Presentations section selected - calling loadPresentations
+Console.js:61 📡 Welcome message response status: 200
+Console.js:61 📊 Welcome message data received: Object
+Console.js:61 ✅ Welcome message loaded successfully
+Console.js:61 Real favorites count from API: 0
+Console.js:61 📡 Response status: 200
+Console.js:61 📊 Clients data received: Object
+Console.js:61 ✅ Success! Displaying 10 clients
+Console.js:61 📝 Displaying clients: Array(10)
+Console.js:61 Memory usage: Object
+Console.js:61 Recommendations data received: Object
+Console.js:61 📦 Preloaded: /static/css/styles.css
+Console.js:61 📦 Preloaded: /static/js/super_search.js
+Console.js:61 📦 Preloaded: /static/js/main.js
+Console.js:61 Response status: 200
+Console.js:61 Raw response: {"presentations":[{"client_name":"\u043a\u0440\u0438\u0441\u0442\u0438\u043d\u0430","client_phone":"","collection_type":"presentation","created_at":"2025-09-13T17:02:39.278487","description":"neweweew","id":4,"is_public":false,"last_viewed_at":"2025-09-13T20:20:08.304550","properties":[{"address":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439, \u0421\u043e\u0447\u0438, \u041a\u0443\u0434\u0435\u043f\u0441\u0442\u0430 \u043c-\u043d, \u0418\u0441\u043a\u0440\u044b, 88 \u043b\u0438\u04427","area":"23.40","balcony_count":0,"cashback":500000,"complex_name":"\u0416\u041a \"\u041b\u0435\u0442\u043d\u0438\u0439\"","developer":"AVA","district":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","floor":1,"id":1999611557,"layout_image":"https://imgdmclkru.klassified.ru/vitrina/d1/e2/d1e2240381cf00a1023321520171c950ca1c6f09.jpg","loggia_count":0,"main_image":"https://imgdmclkru.klassified.ru/vitrina/d1/e2/d1e2240381cf00a1023321520171c950ca1c6f09.jpg","manager_note":null,"order_index":1,"price":8166600,"price_per_sqm":349000,"property_id":"1999611557","property_type":"\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430","renovation_display_name":"","rooms":0,"status":"available","title":"\u0421\u0442\u0443\u0434\u0438\u044f, 23.40 \u043c\u00b2","total_floors":12},{"address":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439, \u0421\u043e\u0447\u0438, \u041a\u0443\u0434\u0435\u043f\u0441\u0442\u0430 \u043c-\u043d, \u0418\u0441\u043a\u0440\u044b, 88 \u043b\u0438\u04427","area":"23.90","balcony_count":0,"cashback":500000,"complex_name":"\u0416\u041a \"\u041b\u0435\u0442\u043d\u0438\u0439\"","developer":"AVA","district":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","floor":1,"id":1999611558,"layout_image":"https://imgdmclkru.klassified.ru/vitrina/7b/80/7b80328537d1001376e0aabffc7f57e0f1c52990.jpg","loggia_count":0,"main_image":"https://imgdmclkru.klassified.ru/vitrina/7b/80/7b80328537d1001376e0aabffc7f57e0f1c52990.jpg","manager_note":null,"order_index":2,"price":8341100,"price_per_sqm":349000,"property_id":"1999611558","property_type":"\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430","renovation_display_name":"","rooms":0,"status":"available","title":"\u0421\u0442\u0443\u0434\u0438\u044f, 23.90 \u043c\u00b2","total_floors":12},{"address":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439, \u0421\u043e\u0447\u0438, \u041a\u0443\u0434\u0435\u043f\u0441\u0442\u0430 \u043c-\u043d, \u0418\u0441\u043a\u0440\u044b, 88 \u043b\u0438\u04427","area":"24.20","balcony_count":0,"cashback":500000,"complex_name":"\u0416\u041a \"\u041b\u0435\u0442\u043d\u0438\u0439\"","developer":"AVA","district":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","floor":1,"id":1999611566,"layout_image":"https://imgdmclkru.klassified.ru/vitrina/f9/e4/f9e42f064885e35e5a5a5869e64d5ddb27a46b5e.jpg","loggia_count":0,"main_image":"https://imgdmclkru.klassified.ru/vitrina/f9/e4/f9e42f064885e35e5a5a5869e64d5ddb27a46b5e.jpg","manager_note":null,"order_index":3,"price":8445800,"price_per_sqm":349000,"property_id":"1999611566","property_type":"\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430","renovation_display_name":"","rooms":0,"status":"available","title":"\u0421\u0442\u0443\u0434\u0438\u044f, 24.20 \u043c\u00b2","total_floors":12},{"address":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439, \u0421\u043e\u0447\u0438, \u042f\u0441\u043d\u043e\u0433\u043e\u0440\u0441\u043a\u0430\u044f, 16/2 \u043b\u0438\u04426","area":"20.67","balcony_count":0,"cashback":500000,"complex_name":"\u0416\u041a \"\u041a\u0438\u0441\u043b\u043e\u0440\u043e\u0434\"","developer":"AVA","district":"\u0420\u043e\u0441\u0441\u0438\u044f, \u041a\u0440\u0430\u0441\u043d\u043e\u0434\u0430\u0440\u0441\u043a\u0438\u0439 \u043a\u0440\u0430\u0439","floor":2,"id":2060712788,"layout_image":"https://imgdmclkru.klassified.ru/vitrina/00/4e/004e1adf77e3cb01f5d35826f3a65dc8436bbe3a.jpg","loggia_count":0,"main_image":"https://imgdmclkru.klassified.ru/vitrina/00/4e/004e1adf77e3cb01f5d35826f3a65dc8436bbe3a.jpg","manager_note":null,"order_index":4,"price":8753745,"price_per_sqm":423500,"property_id":"2060712788","property_type":"\u041a\u0432\u0430\u0440\u0442\u0438\u0440\u0430","renovation_display_name":"","rooms":0,"status":"available","title":"\u0421\u0442\u0443\u0434\u0438\u044f, 20.67 \u043c\u00b2","total_floors":2}],"property_count":4,"status":"\u0427\u0435\u0440
+Console.js:61 🎯 FORCE-UPDATE-210734 displayPresentations called with: 3 presentations
+Console.js:61 📊 First presentation sample: Object
+Console.js:61 📡 Welcome message response status: 200
+Console.js:61 📊 Welcome message data received: Object
+Console.js:61 ✅ Welcome message loaded successfully
+Console.js:61 📡 Recent recommendations response status: 200
+Console.js:61 📊 Recent recommendations data received: Object
+Console.js:61 Memory usage: {used: '18 MB', total: '54 MB', limit: '4096 MB'}
+Console.js:61 Preloaded 5 popular queries
+Console.js:61 ✅ SuperSearch initialized successfully
+Console.js:61 Memory usage: {used: '18 MB', total: '54 MB', limit: '4096 MB'}

@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ presentation.title }} - Презентация недвижимости InBack</title>
+    <meta name="description" content="Персональная подборка недвижимости в Краснодаре от InBack">
+    
+    <!-- Cache Busting -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- Essential Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    
+    <style>
+        /* Minimalist Design - InBack Clean Style */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background: #fafafa;
+            color: #374151;
+        }
+
+        /* Clean Header */
+        .header-clean {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Property Cards - Minimalist */
+        .property-card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f3f4f6;
+            overflow: hidden;
+            transition: box-shadow 0.2s ease;
+            margin-bottom: 2rem;
+        }
+
+        .property-card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+        }
+
+        /* Clean Gallery */
+        .gallery-container {
+            border-radius: 12px;
+            overflow: hidden;
+            background: #f9fafb;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /* Characteristics Grid */
+        .char-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .char-item {
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 1rem;
+            border: 1px solid #f3f4f6;
+        }
+
+        .char-item .label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .char-item .value {
+            color: #111827;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Clean Price Display */
+        .price-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .price-main {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #0088CC;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-per-sqm {
+            color: #6b7280;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .cashback-info {
+            background: #ecfdf5;
+            border: 1px solid #d1fae5;
+            border-radius: 8px;
+            padding: 0.75rem;
+            color: #065f46;
+            font-weight: 500;
+        }
+
+        /* Info Sections */
+        .info-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #f3f4f6;
+        }
+
+        .info-section h3 {
+            color: #111827;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-section h3 i {
+            color: #0088CC;
+            font-size: 1.125rem;
+        }
+
+        /* Tags */
+        .tag {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.375rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tag.highlight {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        /* Action Buttons */
+        .btn-primary {
+            background: #0088CC;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: #006699;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: #f9fafb;
+            border-color: #0088CC;
+        }
+
+        /* Navigation Dots - Minimal */
+        .nav-dots {
+            position: fixed;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            background: white;
+            border-radius: 12px;
+            padding: 1rem 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f3f4f6;
+        }
+
+        .nav-dot {
+            width: 8px;
+            height: 8px;
+            background: #d1d5db;
+            border-radius: 50%;
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-dot.active {
+            background: #0088CC;
+            transform: scale(1.25);
+        }
+
+        /* Tabs System */
+        .tabs-container {
+            margin-bottom: 2rem;
+        }
+
+        .tab-buttons {
+            display: flex;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 4px;
+            gap: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            font-weight: 500;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .tab-btn.active {
+            background: #0088CC;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 136, 204, 0.3);
+        }
+
+        .tab-btn:not(.active):hover {
+            background: rgba(0, 136, 204, 0.1);
+            color: #0088CC;
+        }
+
+        .tab-content {
+            position: relative;
+        }
+
+        .tab-pane {
+            display: block;
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .tab-pane.hidden {
+            display: none;
+        }
+
+        /* Map Container */
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+            border: 1px solid #f3f4f6;
+        }
+
+        .yandex-map-container {
+            height: 100%;
+            border-radius: 12px;
+        }
+
+        /* Layout Image */
+        .layout-container {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid #f3f4f6;
+        }
+
+        .layout-container img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        /* Complex Features */
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            border: 1px solid #f3f4f6;
+        }
+
+        .feature-item.available {
+            background: #ecfdf5;
+            border-color: #d1fae5;
+        }
+
+        .feature-item .icon {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+        }
+
+        .feature-item.available .icon {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .feature-item:not(.available) .icon {
+            background: #f3f4f6;
+            color: #9ca3af;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-dots {
+                bottom: 1rem;
+                top: auto;
+                right: 1rem;
+                transform: none;
+                flex-direction: row;
+                padding: 0.5rem 1rem;
+            }
+
+            .nav-dot {
+                margin: 0 0.5rem;
+            }
+
+            .char-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tab-buttons {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    
+    <!-- Clean Header -->
+    <header class="header-clean sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                <!-- Logo & Title -->
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-gradient-to-r from-[#0088CC] to-[#006699] rounded-lg flex items-center justify-center text-white font-bold text-sm mr-2">In</div>
+                        <span class="text-lg font-bold bg-gradient-to-r from-[#0088CC] to-[#006699] bg-clip-text text-transparent">InBack</span>
+                    </div>
+                    <div class="ml-4">
+                        <h1 class="text-2xl lg:text-3xl font-bold text-gray-900">{{ presentation.title }}</h1>
+                        <p class="text-gray-600">Презентация от InBack</p>
+                    </div>
+                </div>
+                
+                <!-- Stats & Actions -->
+                <div class="flex items-center gap-6">
+                    <!-- Stats -->
+                    <div class="flex items-center gap-4 text-sm text-gray-600">
+                        <div class="bg-gray-50 rounded-lg px-4 py-2">
+                            <span class="font-semibold text-gray-900">{{ properties|length }}</span> объектов
+                        </div>
+                        <div class="bg-gray-50 rounded-lg px-4 py-2">
+                            <span class="font-semibold text-gray-900">{{ presentation.view_count }}</span> просмотров
+                        </div>
+                    </div>
+                    
+                    <!-- Share Actions -->
+                    <div class="flex gap-3">
+                        <button id="shareWhatsAppBtn" class="btn-secondary">
+                            <i class="fab fa-whatsapp text-green-600"></i>
+                            WhatsApp
+                        </button>
+                        <button id="copyLinkBtn" class="btn-primary">
+                            <i class="fas fa-copy"></i>
+                            Ссылка
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots flex flex-col" id="propertyNav">
+        {% for property in properties %}
+        <div class="nav-dot" data-target="property-{{ loop.index0 }}" title="Объект {{ loop.index }}"></div>
+        {% endfor %}
+    </div>
+
+    <!-- Properties List -->
+    <main class="py-8">
+        <div class="max-w-6xl mx-auto px-4 space-y-8">
+            {% for property in properties %}
+            <section id="property-{{ loop.index0 }}" class="property-card scroll-mt-20">
+                
+                <!-- Property Header -->
+                <div class="p-6 border-b border-gray-100">
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 text-sm text-gray-500 mb-2">
+                                <span>Объект {{ loop.index }} из {{ properties|length }}</span>
+                                <div class="flex-1 mx-4 bg-gray-200 rounded-full h-1">
+                                    {% set progress = (loop.index / properties|length * 100)|round %}
+                                    <div class="bg-blue-600 h-1 rounded-full" style="width: {{ progress }}%"></div>
+                                </div>
+                                <span>{{ loop.index }}/{{ properties|length }}</span>
+                            </div>
+                            
+                            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
+                                {{ property.name or property.property_info.get('title', 'Квартира') }}
+                            </h2>
+                            
+                            <!-- Property Tags -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                {% set rooms_count = property.rooms or property.property_info.get('rooms', 0) %}
+                                {% if rooms_count == 0 %}
+                                    <span class="tag highlight">Студия</span>
+                                {% else %}
+                                    <span class="tag highlight">{{ rooms_count }}-комнатная</span>
+                                {% endif %}
+                                <span class="tag">{{ property.area or property.property_info.get('area', '?') }} м²</span>
+                                <span class="tag">{{ property.renovation_display_name or property.property_info.get('renovation_display_name', 'Отделка не указана') }}</span>
+                                {% if property.complex_object_class_display_name or property.property_info.get('class_type') %}
+                                <span class="tag">{{ property.complex_object_class_display_name or property.property_info.get('class_type', 'Класс не указан') }}</span>
+                                {% endif %}
+                            </div>
+                            
+                            <div class="text-lg text-gray-600 mb-2">
+                                <i class="fas fa-building text-blue-600 mr-2"></i>
+                                {{ property.complex_name or property.property_info.get('residential_complex', 'ЖК не указан') }}
+                            </div>
+                            
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                                {{ property.address or property.property_info.get('address', 'Адрес уточняется') }}
+                            </div>
+                        </div>
+                        
+                        <!-- Price Display -->
+                        <div class="price-box min-w-[300px]">
+                            <div class="price-main">
+                                {{ "{:,.0f}".format(property.price or property.property_info.get('price', 0)) }} ₽
+                            </div>
+                            <div class="price-per-sqm">
+                                {{ "{:,.0f}".format(property.price_per_sqm or property.property_info.get('price_per_sqm', 0)) }} ₽/м²
+                            </div>
+                            {% if property.cashback and property.cashback > 0 %}
+                            <div class="cashback-info">
+                                <i class="fas fa-coins mr-2"></i>
+                                Кэшбэк: {{ "{:,.0f}".format(property.cashback) }} ₽
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Content with Tabs -->
+                <div class="p-6">
+                    <!-- Tabs System -->
+                    <div class="tabs-container">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" onclick="switchTab({{ loop.index0 }}, 'apartment')">
+                                <i class="fas fa-home mr-2"></i>
+                                О квартире
+                            </button>
+                            <button class="tab-btn" onclick="switchTab({{ loop.index0 }}, 'complex')">
+                                <i class="fas fa-building mr-2"></i>
+                                О жилом комплексе
+                            </button>
+                        </div>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="tab-content-{{ loop.index0 }}">
+                            <!-- О квартире -->
+                            <div class="tab-pane apartment-tab-{{ loop.index0 }}" id="apartment-{{ loop.index0 }}">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                    <!-- Left Column: Gallery and Layout -->
+                                    <div class="space-y-6">
+                                        <!-- Photo Gallery -->
+                                        <div class="info-section">
+                                            <h3>
+                                                <i class="fas fa-camera"></i>
+                                                Фотографии квартиры
+                                            </h3>
+                                            
+                                            <div class="gallery-container">
+                                                {% set photos = property.images or property.property_info.get('photos', []) %}
+                                                {% if photos and photos != False and photos|length > 0 %}
+                                                    {% if photos is string %}
+                                                        {% set photo_list = photos | from_json %}
+                                                    {% else %}
+                                                        {% set photo_list = photos %}
+                                                    {% endif %}
+                                                    
+                                                    <img src="{{ photo_list[0] }}" alt="Фото квартиры" class="w-full">
+                                                    
+                                                    {% if photo_list|length > 1 %}
+                                                    <div class="grid grid-cols-3 gap-2 p-4">
+                                                        {% for photo in photo_list[1:4] %}
+                                                        <img src="{{ photo }}" alt="Фото {{ loop.index + 1 }}" class="w-full h-20 object-cover rounded-lg cursor-pointer" onclick="openImageModal('{{ photo }}')">
+                                                        {% endfor %}
+                                                        {% if photo_list|length > 4 %}
+                                                        <div class="bg-gray-100 h-20 rounded-lg flex items-center justify-center text-gray-600 text-sm cursor-pointer" onclick="showAllPhotos({{ photo_list|tojson|e }})">
+                                                            +{{ photo_list|length - 4 }} еще
+                                                        </div>
+                                                        {% endif %}
+                                                    </div>
+                                                    {% endif %}
+                                                {% else %}
+                                                    <div class="h-64 bg-gray-100 flex items-center justify-center text-gray-500">
+                                                        <div class="text-center">
+                                                            <i class="fas fa-image text-4xl mb-2"></i>
+                                                            <p>Фотографии будут добавлены</p>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Apartment Layout -->
+                                        <div class="info-section">
+                                            <h3>
+                                                <i class="fas fa-cube"></i>
+                                                Планировка квартиры
+                                            </h3>
+                                            
+                                            <div class="layout-container">
+                                                {% if property.layout_image or property.property_info.get('layout_image') %}
+                                                    <img src="{{ property.layout_image or property.property_info.get('layout_image') }}" alt="Планировка квартиры" onclick="openImageModal('{{ property.layout_image or property.property_info.get('layout_image') }}')"
+                                                         class="cursor-pointer hover:opacity-90 transition-opacity">
+                                                {% else %}
+                                                    <div class="h-64 bg-gray-100 flex items-center justify-center text-gray-500">
+                                                        <div class="text-center">
+                                                            <i class="fas fa-home text-4xl mb-2"></i>
+                                                            <p>Планировка будет добавлена</p>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Object Location Map -->
+                                        <div class="info-section">
+                                            <h3>
+                                                <i class="fas fa-map-marker-alt"></i>
+                                                Местоположение
+                                            </h3>
+                                            
+                                            <div class="space-y-4">
+                                                <div class="text-sm text-gray-600">
+                                                    <strong>{{ property.address or property.property_info.get('address', 'Адрес уточняется') }}</strong>
+                                                </div>
+                                                
+                                                {% set coordinates = property.property_info.get('coordinates', {}) %}
+                                                {% set lat = coordinates.get('lat') or property.latitude %}
+                                                {% set lng = coordinates.get('lng') or property.longitude %}
+                                                {% if lat and lng and lat != 0 and lng != 0 %}
+                                                <div class="map-container" id="map-{{ loop.index0 }}" 
+                                                     data-lat="{{ lat }}" 
+                                                     data-lng="{{ lng }}"
+                                                     data-address="{{ property.address or property.property_info.get('address', 'Объект недвижимости') }}">
+                                                </div>
+                                                {% else %}
+                                                    <div class="h-64 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">
+                                                        <div class="text-center">
+                                                            <i class="fas fa-map text-4xl mb-2"></i>
+                                                            <p>Карта будет добавлена</p>
+                                                        </div>
+                                                    </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Right Column: Characteristics -->
+                                    <div class="space-y-6">
+                                        <!-- Detailed Characteristics -->
+                                        <div class="info-section">
+                                            <h3>
+                                                <i class="fas fa-ruler-combined"></i>
+                                                Характеристики квартиры
+                                            </h3>
+                                            
+                                            <div class="char-grid">
+                                                <div class="char-item">
+                                                    <div class="label">Общая площадь</div>
+                                                    <div class="value">{{ property.area or property.property_info.get('area', '?') }} м²</div>
+                                                </div>
+                                                
+                                                {% if property.kitchen_area or property.property_info.get('kitchen_area') %}
+                                                <div class="char-item">
+                                                    <div class="label">Площадь кухни</div>
+                                                    <div class="value">{{ property.kitchen_area or property.property_info.get('kitchen_area') }} м²</div>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                {% if property.living_area or property.property_info.get('living_area') %}
+                                                <div class="char-item">
+                                                    <div class="label">Жилая площадь</div>
+                                                    <div class="value">{{ property.living_area or property.property_info.get('living_area') }} м²</div>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                <div class="char-item">
+                                                    <div class="label">Этаж</div>
+                                                    <div class="value">{{ property.floor or property.property_info.get('floor', '?') }} из {{ property.total_floors or property.property_info.get('total_floors', '?') }}</div>
+                                                </div>
+                                                
+                                                {% if property.ceiling_height or property.property_info.get('ceiling_height') %}
+                                                <div class="char-item">
+                                                    <div class="label">Высота потолков</div>
+                                                    <div class="value">{{ property.ceiling_height or property.property_info.get('ceiling_height') }} м</div>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                {% if property.balcony or property.property_info.get('balcony') %}
+                                                <div class="char-item">
+                                                    <div class="label">Балкон</div>
+                                                    <div class="value">{{ property.balcony_area or property.property_info.get('balcony_area', 'Есть') }} м²</div>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                {% if property.view or property.property_info.get('view') %}
+                                                <div class="char-item">
+                                                    <div class="label">Вид из окна</div>
+                                                    <div class="value">{{ property.view or property.property_info.get('view') }}</div>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                <!-- Дополнительные характеристики -->
+                                                {% set building_number = property.building or property.property_info.get('building') %}
+                                                <div class="char-item">
+                                                    <div class="label">Корпус</div>
+                                                    <div class="value">
+                                                        {% if building_number and (building_number|string).strip() %}
+                                                            {{ building_number }}
+                                                        {% else %}
+                                                            Не указан
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                                
+                                                {% if property.property_info.get('property_type') %}
+                                                <div class="char-item">
+                                                    <div class="label">Тип сделки</div>
+                                                    <div class="value">Продажа</div>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                {% if property.status %}
+                                                <div class="char-item">
+                                                    <div class="label">Статус</div>
+                                                    <div class="value">
+                                                        {% if property.status == 'available' %}Новостройка
+                                                        {% elif property.status == 'sold' %}Продано
+                                                        {% else %}{{ property.status }}
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                {% if property.property_info.get('created_at') or property.property_info.get('date_added') %}
+                                                <div class="char-item">
+                                                    <div class="label">Размещено</div>
+                                                    <div class="value">
+                                                        {% set date_added = property.property_info.get('created_at') or property.property_info.get('date_added') %}
+                                                        {% if date_added %}
+                                                            {{ date_added.strftime('%d.%m.%Y') if date_added.strftime else date_added }}
+                                                        {% else %}
+                                                            Недавно
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Finishing Details -->
+                                        <div class="info-section">
+                                            <h3>
+                                                <i class="fas fa-paint-brush"></i>
+                                                Отделка и комплектация
+                                            </h3>
+                                            
+                                            <div class="space-y-4">
+                                                <div class="bg-blue-50 rounded-lg p-4">
+                                                    <h4 class="font-medium text-blue-900 mb-2">Тип отделки</h4>
+                                                    <p class="text-blue-800">{{ property.renovation_display_name or property.property_info.get('renovation_display_name', 'Отделка не указана') }}</p>
+                                                </div>
+                                                
+                                                {% if property.complex_object_class_display_name or property.property_info.get('class_type') %}
+                                                <div class="bg-green-50 rounded-lg p-4">
+                                                    <h4 class="font-medium text-green-900 mb-2">Класс жилья</h4>
+                                                    <p class="text-green-800">{{ property.complex_object_class_display_name or property.property_info.get('class_type') }}</p>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                {% if property.finishing_details %}
+                                                <div class="space-y-2">
+                                                    <h4 class="font-medium">Детали отделки:</h4>
+                                                    <ul class="text-sm text-gray-600 space-y-1">
+                                                        {% for detail in property.finishing_details %}
+                                                        <li><i class="fas fa-check text-blue-600 mr-2"></i>{{ detail }}</li>
+                                                        {% endfor %}
+                                                    </ul>
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Financial Information -->
+                                        <div class="info-section">
+                                            <h3>
+                                                <i class="fas fa-calculator"></i>
+                                                Финансовые условия
+                                            </h3>
+                                            
+                                            <div class="space-y-3">
+                                                <div class="flex justify-between">
+                                                    <span class="text-gray-600">Стоимость квартиры:</span>
+                                                    <span class="font-semibold">{{ "{:,.0f}".format(property.price or property.property_info.get('price', 0)) }} ₽</span>
+                                                </div>
+                                                
+                                                <div class="flex justify-between">
+                                                    <span class="text-gray-600">Цена за м²:</span>
+                                                    <span class="font-semibold">{{ "{:,.0f}".format(property.price_per_sqm or property.property_info.get('price_per_sqm', 0)) }} ₽</span>
+                                                </div>
+                                                
+                                                {% if property.mortgage_price or property.property_info.get('mortgage_price') %}
+                                                <div class="flex justify-between">
+                                                    <span class="text-gray-600">Ипотека от:</span>
+                                                    <span class="font-semibold">{{ "{:,.0f}".format(property.mortgage_price or property.property_info.get('mortgage_price', 0)) }} ₽/мес</span>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                {% if property.cashback and property.cashback > 0 %}
+                                                <div class="border-t pt-3">
+                                                    <div class="flex justify-between items-center">
+                                                        <span class="text-green-600 font-medium">Кэшбэк от InBack:</span>
+                                                        <span class="font-bold text-green-600 text-lg">{{ "{:,.0f}".format(property.cashback) }} ₽</span>
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- О жилом комплексе -->
+                            <div class="tab-pane complex-tab-{{ loop.index0 }} hidden" id="complex-{{ loop.index0 }}">
+                                <div class="space-y-6">
+                                    <!-- Complex Basic Info -->
+                                    <div class="info-section">
+                                        <h3>
+                                            <i class="fas fa-building"></i>
+                                            Информация о комплексе
+                                        </h3>
+                                        
+                                        <div class="space-y-4">
+                                            <div>
+                                                <h4 class="font-semibold text-xl mb-2">{{ property.complex_name or 'ЖК не указан' }}</h4>
+                                                {% if property.developer or property.complex_info.get('developer') %}
+                                                <p class="text-gray-600 mb-2">
+                                                    <i class="fas fa-hard-hat mr-2"></i>
+                                                    Застройщик: {{ property.developer or property.complex_info.get('developer') }}
+                                                </p>
+                                                {% endif %}
+                                                
+                                                {% if property.complex_info and property.complex_info.get('class') %}
+                                                <p class="text-gray-600 mb-2">
+                                                    <i class="fas fa-star mr-2"></i>
+                                                    Класс: {{ property.complex_info.get('class') }}
+                                                </p>
+                                                {% endif %}
+                                                
+                                                {% if property.complex_end_build_quarter and property.complex_end_build_year %}
+                                                <p class="text-gray-600 mb-2">
+                                                    <i class="fas fa-calendar mr-2"></i>
+                                                    Срок сдачи: {{ property.complex_end_build_quarter }} кв. {{ property.complex_end_build_year }}
+                                                </p>
+                                                {% endif %}
+                                                
+                                                {% if property.complex_info and property.complex_info.get('description') %}
+                                                <div class="bg-blue-50 rounded-lg p-4 mt-4">
+                                                    <h5 class="font-medium text-blue-900 mb-2">Описание комплекса:</h5>
+                                                    <p class="text-blue-800">{{ property.complex_info.get('description') }}</p>
+                                                </div>
+                                                {% endif %}
+                                                
+                                                <!-- Основные характеристики -->
+                                                <div class="bg-gray-50 rounded-lg p-4 mt-4">
+                                                    <h5 class="font-medium mb-3">Основные характеристики:</h5>
+                                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                                                        {% if property.complex_info and property.complex_info.get('class') %}
+                                                        <div>
+                                                            <span class="font-medium">Класс недвижимости:</span>
+                                                            <span class="text-gray-700">{{ property.complex_info.get('class') }}</span>
+                                                        </div>
+                                                        {% endif %}
+                                                        
+                                                        <div>
+                                                            <span class="font-medium">Застройщик:</span>
+                                                            <span class="text-gray-700">{{ property.developer or property.complex_info.get('developer', 'Не указан') }}</span>
+                                                        </div>
+                                                        
+                                                        {% if property.complex_end_build_quarter and property.complex_end_build_year %}
+                                                        <div>
+                                                            <span class="font-medium">Срок завершения:</span>
+                                                            <span class="text-gray-700">{{ property.complex_end_build_quarter }} кв. {{ property.complex_end_build_year }}</span>
+                                                        </div>
+                                                        {% endif %}
+                                                        
+                                                        <div>
+                                                            <span class="font-medium">Название ЖК:</span>
+                                                            <span class="text-gray-700">{{ property.complex_name or 'Не указано' }}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Complex Features -->
+                                    <div class="info-section">
+                                        <h3>
+                                            <i class="fas fa-check-circle"></i>
+                                            Особенности комплекса
+                                        </h3>
+                                        
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            {% set features = property.complex_info.get('features', {}) if property.complex_info else {} %}
+                                            
+                                            <!-- Аккредитация банков -->
+                                            <div class="feature-item available">
+                                                <div class="icon">
+                                                    <i class="fas fa-university"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium">Аккредитация банков</div>
+                                                    <div class="text-sm text-gray-600">Ипотека по льготным программам</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Льготная ипотека -->
+                                            <div class="feature-item available">
+                                                <div class="icon">
+                                                    <i class="fas fa-leaf"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium">Льготная ипотека</div>
+                                                    <div class="text-sm text-gray-600">Льготная ставка от 4,1%</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Много фотографий -->
+                                            <div class="feature-item available">
+                                                <div class="icon">
+                                                    <i class="fas fa-camera"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium">Много фотографий ЖК</div>
+                                                    <div class="text-sm text-gray-600">Полная визуализация объекта</div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Завершение строительства -->
+                                            {% if property.complex_end_build_quarter and property.complex_end_build_year %}
+                                            <div class="feature-item available">
+                                                <div class="icon">
+                                                    <i class="fas fa-calendar-check"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium">Срок завершения</div>
+                                                    <div class="text-sm text-gray-600">{{ property.complex_end_build_quarter }} кв. {{ property.complex_end_build_year }}</div>
+                                                </div>
+                                            </div>
+                                            {% endif %}
+                                            
+                                            <!-- Класс жилья -->
+                                            {% if property.complex_info and property.complex_info.get('class') %}
+                                            <div class="feature-item available">
+                                                <div class="icon">
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium">Класс недвижимости</div>
+                                                    <div class="text-sm text-gray-600">{{ property.complex_info.get('class') }}</div>
+                                                </div>
+                                            </div>
+                                            {% endif %}
+                                            
+                                            <!-- Застройщик -->
+                                            <div class="feature-item available">
+                                                <div class="icon">
+                                                    <i class="fas fa-hard-hat"></i>
+                                                </div>
+                                                <div>
+                                                    <div class="font-medium">Застройщик</div>
+                                                    <div class="text-sm text-gray-600">{{ property.developer or property.complex_info.get('developer', 'Не указан') }}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Complex Photos -->
+                                    <div class="info-section">
+                                        <h3>
+                                            <i class="fas fa-camera"></i>
+                                            Фотографии комплекса
+                                        </h3>
+                                        
+                                        <div class="gallery-container">
+                                            <!-- Show main complex image first if available -->
+                                            {% if property.complex_info and property.complex_info.get('image') %}
+                                            <img src="{{ property.complex_info.get('image') }}" alt="{{ property.complex_name }}" 
+                                                 onclick="openImageModal('{{ property.complex_info.get('image') }}')"
+                                                 class="w-full cursor-pointer hover:opacity-90 transition-opacity mb-3">
+                                            {% endif %}
+                                            
+                                            <!-- Property photo gallery for complex -->
+                                            {% if property.images and property.images|length > 0 %}
+                                                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                                    {% for image in property.images[:6] %}
+                                                    <img src="{{ image }}" alt="Фото {{ property.complex_name }}" 
+                                                         onclick="openImageModal('{{ image }}')"
+                                                         class="w-full h-24 object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity">
+                                                    {% endfor %}
+                                                </div>
+                                                
+                                                {% if property.images|length > 6 %}
+                                                <button onclick='showAllPhotos({{ property.images|tojson }})' class="mt-3 text-blue-600 hover:text-blue-800 text-sm">
+                                                    Показать все {{ property.images|length }} фото
+                                                </button>
+                                                {% endif %}
+                                            {% elif not property.complex_info or not property.complex_info.get('image') %}
+                                                <div class="h-48 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">
+                                                    <div class="text-center">
+                                                        <i class="fas fa-camera text-4xl mb-2"></i>
+                                                        <p>Фотографии будут добавлены</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Complex Location Map -->
+                                    <div class="info-section">
+                                        <h3>
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Местоположение комплекса
+                                        </h3>
+                                        
+                                        <div class="space-y-4">
+                                            <div class="text-sm text-gray-600">
+                                                <strong>{{ property.address or property.property_info.get('address', 'Адрес уточняется') }}</strong>
+                                            </div>
+                                            
+                                            {% set coordinates = property.property_info.get('coordinates', {}) %}
+                                            {% set lat = coordinates.get('lat') or property.latitude %}
+                                            {% set lng = coordinates.get('lng') or property.longitude %}
+                                            {% if lat and lng and lat != 0 and lng != 0 %}
+                                            <div class="map-container" id="complex-map-{{ loop.index0 }}" 
+                                                 data-lat="{{ lat }}" 
+                                                 data-lng="{{ lng }}"
+                                                 data-address="{{ property.complex_name or 'Жилой комплекс' }}">
+                                            </div>
+                                            {% else %}
+                                                <div class="h-64 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500">
+                                                    <div class="text-center">
+                                                        <i class="fas fa-map text-4xl mb-2"></i>
+                                                        <p>Карта комплекса будет добавлена</p>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% endfor %}
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // Simple tab switching function
+        function switchTab(propertyIndex, tabType) {
+            console.log('🔄 Switching tab:', propertyIndex, tabType);
+            
+            // Find all tab buttons for this property and remove active class
+            const propertyContainer = document.getElementById(`property-${propertyIndex}`);
+            if (propertyContainer) {
+                const tabButtons = propertyContainer.querySelectorAll('.tab-btn');
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to the clicked button
+                const clickedBtn = event.target.closest('.tab-btn');
+                if (clickedBtn) {
+                    clickedBtn.classList.add('active');
+                }
+            }
+            
+            // Hide all tab panes for this property
+            const apartmentTab = document.getElementById(`apartment-${propertyIndex}`);
+            const complexTab = document.getElementById(`complex-${propertyIndex}`);
+            
+            if (apartmentTab) apartmentTab.classList.add('hidden');
+            if (complexTab) complexTab.classList.add('hidden');
+            
+            // Show selected tab
+            if (tabType === 'apartment' && apartmentTab) {
+                apartmentTab.classList.remove('hidden');
+                console.log('✅ Showing apartment tab for property:', propertyIndex);
+            } else if (tabType === 'complex' && complexTab) {
+                complexTab.classList.remove('hidden');
+                console.log('✅ Showing complex tab for property:', propertyIndex);
+                
+                // Initialize complex map when tab is shown
+                setTimeout(() => {
+                    initializeComplexMap(propertyIndex);
+                }, 100);
+            }
+        }
+        
+        // Gallery modal functions
+        function openImageModal(imageSrc) {
+            let modal = document.getElementById('imageModal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'imageModal';
+                modal.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4';
+                modal.innerHTML = `
+                    <div class="relative max-w-full max-h-full">
+                        <img id="modalImage" class="max-w-full max-h-full object-contain rounded-lg">
+                        <button onclick="closeImageModal()" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-all">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeImageModal();
+                });
+                
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') closeImageModal();
+                });
+            }
+            
+            document.getElementById('modalImage').src = imageSrc;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        function showAllPhotos(photos) {
+            // Open first image in gallery - could be enhanced to show a carousel
+            if (photos && photos.length > 0) {
+                openImageModal(photos[0]);
+                console.log('Opened gallery with', photos.length, 'photos');
+            }
+        }
+        
+        // Global variables
+        let maps = {};
+        
+        // Navigation dots functionality
+        const navDots = document.querySelectorAll('.nav-dot');
+        const properties = document.querySelectorAll('[id^="property-"]');
+        
+        navDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                const target = document.getElementById(`property-${index}`);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Update active dot on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            properties.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navDots.forEach((dot, index) => {
+                dot.classList.remove('active');
+                if (current === `property-${index}`) {
+                    dot.classList.add('active');
+                }
+            });
+        });
+        
+        // Map initialization
+        function initializeMap(propertyIndex) {
+            const mapContainer = document.getElementById(`map-${propertyIndex}`);
+            if (!mapContainer || maps[propertyIndex]) return;
+            
+            const lat = parseFloat(mapContainer.getAttribute('data-lat'));
+            const lng = parseFloat(mapContainer.getAttribute('data-lng'));
+            const address = mapContainer.getAttribute('data-address');
+            
+            if (!lat || !lng || isNaN(lat) || isNaN(lng)) return;
+            
+            try {
+                // Initialize Yandex map
+                if (typeof ymaps !== 'undefined') {
+                    ymaps.ready(() => {
+                        const map = new ymaps.Map(`map-${propertyIndex}`, {
+                            center: [lat, lng],
+                            zoom: 15,
+                            controls: ['zoomControl']
+                        });
+                        
+                        // Add marker
+                        const marker = new ymaps.Placemark([lat, lng], {
+                            balloonContent: `<strong>${address}</strong>`
+                        }, {
+                            preset: 'islands#redDotIcon'
+                        });
+                        
+                        map.geoObjects.add(marker);
+                        maps[propertyIndex] = map;
+                        console.log(`🗺️ Map initialized for property ${propertyIndex}`);
+                    });
+                }
+            } catch (error) {
+                console.error(`Error initializing map for property ${propertyIndex}:`, error);
+            }
+        }
+        
+        // Complex map initialization
+        function initializeComplexMap(propertyIndex) {
+            const mapContainer = document.getElementById(`complex-map-${propertyIndex}`);
+            if (!mapContainer || maps[`complex-${propertyIndex}`]) return;
+            
+            const lat = parseFloat(mapContainer.getAttribute('data-lat'));
+            const lng = parseFloat(mapContainer.getAttribute('data-lng'));
+            const address = mapContainer.getAttribute('data-address');
+            
+            if (!lat || !lng || isNaN(lat) || isNaN(lng)) return;
+            
+            try {
+                // Initialize Yandex map
+                if (typeof ymaps !== 'undefined') {
+                    ymaps.ready(() => {
+                        const map = new ymaps.Map(`complex-map-${propertyIndex}`, {
+                            center: [lat, lng],
+                            zoom: 15,
+                            controls: ['zoomControl']
+                        });
+                        
+                        // Add marker
+                        const marker = new ymaps.Placemark([lat, lng], {
+                            balloonContent: `<strong>${address}</strong>`
+                        }, {
+                            preset: 'islands#blueDotIcon'
+                        });
+                        
+                        map.geoObjects.add(marker);
+                        maps[`complex-${propertyIndex}`] = map;
+                        console.log(`🗺️ Complex map initialized for property ${propertyIndex}`);
+                    });
+                }
+            } catch (error) {
+                console.error(`Error initializing complex map for property ${propertyIndex}:`, error);
+            }
+        }
+        
+        // Image modal functionality
+        function openImageModal(imageSrc) {
+            // Create modal if it doesn't exist
+            let modal = document.getElementById('imageModal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.id = 'imageModal';
+                modal.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4';
+                modal.innerHTML = `
+                    <div class="relative max-w-full max-h-full">
+                        <img id="modalImage" class="max-w-full max-h-full object-contain rounded-lg">
+                        <button onclick="closeImageModal()" class="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full w-10 h-10 flex items-center justify-center hover:bg-opacity-75 transition-all">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `;
+                document.body.appendChild(modal);
+                
+                // Close on click outside
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeImageModal();
+                    }
+                });
+                
+                // Close on escape key
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        closeImageModal();
+                    }
+                });
+            }
+            
+            document.getElementById('modalImage').src = imageSrc;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        function showAllPhotos(photos) {
+            // Open first image in gallery - could be enhanced to show a carousel
+            if (photos && photos.length > 0) {
+                openImageModal(photos[0]);
+                console.log('Opened gallery with', photos.length, 'photos');
+            }
+        }
+        
+        // Share functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🎯 DOM loaded, initializing presentation...');
+            
+            document.getElementById('shareWhatsAppBtn')?.addEventListener('click', () => {
+                const url = window.location.href;
+                const text = encodeURIComponent('Посмотрите эту презентацию недвижимости от InBack: ');
+                window.open(`https://wa.me/?text=${text}${url}`, '_blank');
+            });
+            
+            document.getElementById('copyLinkBtn')?.addEventListener('click', () => {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    const button = document.getElementById('copyLinkBtn');
+                    const originalText = button.innerHTML;
+                    button.innerHTML = '<i class="fas fa-check"></i> Скопировано!';
+                    button.classList.add('bg-green-600');
+                    
+                    setTimeout(() => {
+                        button.innerHTML = originalText;
+                        button.classList.remove('bg-green-600');
+                    }, 2000);
+                }).catch(() => {
+                    alert('Ссылка скопирована в буфер обмена!');
+                });
+            });
+            
+            console.log('✅ Enhanced presentation view loaded successfully');
+        });
+    </script>
+</body>
+</html>
